@@ -7,6 +7,10 @@ def bagels():
     print(' Bagels      No digit is correct')
     num= random.randint(100,999)
     print('I have thought up a number.\n    You have 10 guesses to get it.')
-
+    counter=0
+    while(counter<10):
+        print(f'Guess#{counter+1}')
+        guess=input()
+        counter+=1
     print(num)
 bagels()
