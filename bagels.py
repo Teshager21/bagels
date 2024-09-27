@@ -35,6 +35,7 @@ def bagels():
                 guess=int(input(f'Guess#{counter+1}\n'))
             if assess(num,guess)=='win': break
             counter+=1
+        if counter==10 :print(f"You lost this round!, The correct number was {num}")
         continuePlaying= input('Would you like to continue playing: (yes/no)').lower()
         if continuePlaying=='no' : break
 bagels()
