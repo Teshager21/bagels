@@ -30,6 +30,9 @@ def bagels():
         counter=0
         while(counter<10):
             guess=int(input(f'Guess#{counter+1}\n'))
+            while not 100<=guess<=999: 
+                print('The number must be three digits')
+                guess=int(input(f'Guess#{counter+1}\n'))
             if assess(num,guess)=='win': break
             counter+=1
         continuePlaying= input('Would you like to continue playing: (yes/no)').lower()
