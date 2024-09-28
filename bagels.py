@@ -18,7 +18,12 @@ def assess(num,guess):
 def bagels():
     print('''
     Bagels a deductive logic game.
+<<<<<<< HEAD
     I am thinking of a 3-digit number. Try to guess what it is.
+=======
+    By Al Sweigart al@inventwithpython.com
+    'I am thinking of a 3-digit number. Try to guess what it is.
+>>>>>>> ffc9d503e87a0a22e0401acdcb5ab8f4c9189e9b
         Here are some clues:
         When I say:    That means:
         Pico        One digit is correct but in the wrong position.
