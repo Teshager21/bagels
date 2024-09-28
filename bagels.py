@@ -8,21 +8,23 @@ def assess(num,guess):
                 hint+= ' Fermi'
             else: hint+= ' Pico'
         else: hint+=' '
-    if hint=='': print("Bagels")
+    if hint=='   ': print("Bagels")
     elif(hint==' Fermi Fermi Fermi'): 
         print('You got it!',hint)
         return 'win'
     else: print(hint)
-    print(num)
 
 
 def bagels():
-    print('Bagels a deductive logic game.\nBy Al Sweigart al@inventwithpython.com')
-    print('I am thinking of a 3-digit number. Try to guess what it is.')
-    print('Here are some clues:\nWhen I say:    That means:\n Pico        One digit is correct but in the wrong position.')
-    print(' Fermi       One digit is correct and in the right position')
-    print(' Bagels      No digit is correct')
-    print('I have thought up a number.\n    You have 10 guesses to get it.')
+    print('''
+    Bagels a deductive logic game.
+    I am thinking of a 3-digit number. Try to guess what it is.
+        Here are some clues:
+        When I say:    That means:
+        Pico        One digit is correct but in the wrong position.
+        Fermi       One digit is correct and in the right position
+        Bagels      No digit is correct
+    I have thought up a number.\n    You have 10 guesses to get it.''')
     status='loss'
     while True:
         num= random.randint(100,999)
@@ -38,5 +40,7 @@ def bagels():
             counter+=1
         if status=='loss' :print(f"You lost this round!, The correct number was {num}")
         continuePlaying= input('Would you like to continue playing: (yes/no)').lower()
-        if continuePlaying=='no' : break
+        if continuePlaying=='no' : 
+            print('Thank you for playing, See you!')
+            break
 bagels()
